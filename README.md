@@ -1,5 +1,5 @@
 # Water-CDM: Adaptive Double-Branch Fusion Conditional Diffusion Model for Underwater Image Restoration
-This is the repository for our paper[Link](https://ieeexplore.ieee.org/document/11005520)
+This is the repository for our paper. **[Link](https://ieeexplore.ieee.org/document/11005520)**
 # Data Preparation
 Put your training and test dataset in ```dataset```. The structure of the ```dataset``` are as follows:
 ```
@@ -29,4 +29,4 @@ If you use the code in this repository for your work, please cite our paper:
   pages={1-1}
 ```
 # Acknowledgement
-Our code architecture is based on the **[SR3](https://github.com/Janspiry/Image-Super-Resolution-via-Iterative-Refinement)**  ,**[DiffWater](https://github.com/Guan-MS/DiffWater?tab=readme-ov-file)** and []
+Our code architecture is based on the **[SR3](https://github.com/Janspiry/Image-Super-Resolution-via-Iterative-Refinement)**  ,**[DiffWater](https://github.com/Guan-MS/DiffWater?tab=readme-ov-file)**. We also thank for the following repositories:**[UIEB](https://li-chongyi.github.io/proj_benchmark.html)**,**[EUVP](https://irvlab.cs.umn.edu/resources/euvp-dataset)**,**[LSUI](https://github.com/LintaoPeng/U-shape_Transformer_for_Underwater_Image_Enhancement)**,**[Fusion](https://github.com/fergaletto/Color-Balance-and-fusion-for-underwater-image-enhancement.-.)**,**[MMLE](https://github.com/Li-Chongyi/MMLE_code)**,**[FUnIE-GAN](https://github.com/xahidbuffon/FUnIE-GAN)**,**[MLFcGAN](https://github.com/Xiaodong-Bran/MLFcGAN)**,**[Shallow-UWnet](https://github.com/mkartik/Shallow-UWnet)**,**[PUIE-net](https://github.com/zhenqifu/PUIE-Net)**.
