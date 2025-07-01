@@ -29,4 +29,4 @@ If you use the code in this repository for your work, please cite our paper:
   pages={1-1}
 ```
 # Acknowledgement
-Our code architecture is based on the SR3(https://github.com/Janspiry/Image-Super-Resolution-via-Iterative-Refinement)  ,DiffWater(https://github.com/Guan-MS/DiffWater?tab=readme-ov-file) and 
+Our code architecture is based on the **[SR3](https://github.com/Janspiry/Image-Super-Resolution-via-Iterative-Refinement)**  ,**[DiffWater](https://github.com/Guan-MS/DiffWater?tab=readme-ov-file)** and []
