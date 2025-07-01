@@ -1,0 +1,90 @@
+{
+    "name": "Water-CDM",
+    "phase": "train", 
+    "gpu_ids": [
+        2
+    ],
+    "path": { 
+        "stage": "train", 
+        "log": "logs",
+        "tb_logger": "tb_logger",
+        "results": "results",
+        "checkpoint": "checkpoint",
+        "resume_state": null //experiment_checkpoint
+    },
+    "datasets": {
+        "train": {
+            "name": "Water",
+            "dataroot": "dataset/train",
+            "datatype": "img", 
+            "l_resolution": 16, 
+            "r_resolution": 256, 
+            "batch_size": 1,
+            "num_workers": 8,
+            "use_shuffle": true,
+            "data_len": -1 
+        },
+        "val": {
+            "name": "Water",
+            "dataroot": "dataset/val",
+            "datatype": "img", 
+            "l_resolution": 16,
+            "r_resolution": 256,
+            "data_len": -1 
+        }
+    },
+    "model": {
+        "which_model_G": "Attn", 
+        "finetune_norm": false,
+        "unet": {
+            "in_channel": 6,
+            "out_channel": 3,
+            "inner_channel": 48,
+            "norm_groups": 24,
+            "channel_multiplier": [
+                1,
+                2,
+                4,
+                8,
+                8
+            ],
+            "attn_res": [
+                16
+            ],
+            "res_blocks": 2,
+            "dropout": 0.2
+        },
+        "beta_schedule": { 
+            "train": {
+                "schedule": "linear",
+                "n_timestep": 2000,
+                "linear_start": 1e-6,
+                "linear_end": 1e-2
+            },
+            "val": {
+                "schedule": "linear",
+                "n_timestep": 2000,
+                "linear_start": 1e-6,
+                "linear_end": 1e-2
+            }
+        },
+        "diffusion": {
+            "image_size": 256,
+            "channels": 3, 
+            "conditional": true 
+        }
+    },
+    "train": {
+        "n_iter": 2000000,
+        "val_freq": 100,
+        "save_checkpoint_freq": 100,
+        "print_freq": 100,
+        "optimizer": {
+            "type": "adam",
+            "lr": 1e-4
+        }
+    },
+    "wandb": {
+        "project": "Water-CDM"
+    }
+}
