@@ -1,6 +1,6 @@
 # Water-CDM: Adaptive Double-Branch Fusion Conditional Diffusion Model for Underwater Image Restoration
 This is the repository for our paper. **[Link](https://ieeexplore.ieee.org/document/11005520)**
-
+![](Water-CDM.png)
 # Data Preparation
 Put your training and test dataset in ```dataset```. The structure of the ```dataset``` are as follows:
 ```
